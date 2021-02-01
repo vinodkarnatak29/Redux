@@ -14,7 +14,7 @@ function book() {
 }
 
 //Reducer for actions
-const Reducer = (state = intialState, action) => {
+const reducer = (state = intialState, action) => {
     switch (action.type) {
         case "BOOK": {
             return {
@@ -26,7 +26,7 @@ const Reducer = (state = intialState, action) => {
     }
 }
 
-const store = createStore(Reducer);
+const store = createStore(reducer);
 console.log("Initial State", store.getState());
 
 const unsubscribe = store.subscribe(() => {
